@@ -72,7 +72,4 @@
     top: 18rem;
     min-width: 20vw;
   }
-  canvas {
-    min-height: 100vh;
-  }
 }
