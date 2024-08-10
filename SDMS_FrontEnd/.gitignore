@@ -1,0 +1,20 @@
+# Node.js dependencies
+node_modules/
+
+# Vite build files
+.vite/
+
+# Environment variables
+.env
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# System files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,351 @@
+/* !Display details page */
+.main-container-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  min-width: 96vw;
+  flex-direction: column;
+}
+.main-container-display form {
+  min-width: 60%;
+  max-width: 70%;
+  height: 10vh;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  /* background-color: #d81212; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  margin: 2rem;
+}
+.main-container-display form .fetch-details {
+  /* background-color: #fff; */
+  display: flex;
+  min-width: 96%;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container-display .retrieved-values h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.4rem;
+}
+.main-container-display form .fetch-details .fetching-input {
+  padding: 0 3%;
+  border-radius: 1.4rem;
+  min-width: 50%;
+  max-width: 55%;
+  min-height: 5.6vh;
+  border: none;
+  transition: 1s all ease;
+}
+
+.main-container-display
+  form
+  .fetch-details
+  .fetching-input:not(:placeholder-shown) {
+  min-width: 60%;
+  min-height: 5.6vh;
+
+  border-radius: 1.4rem;
+  font-size: 1rem;
+}
+.main-container-display form .fetch-details button[type="submit"] {
+  font-size: larger;
+  text-align: center;
+  transition: all 0.3s;
+  margin: 0.4rem;
+  /* padding: 0.4rem 1rem; */
+  min-width: 20%;
+  max-width: 25%;
+  min-height: 5.6vh;
+  background-color: hsl(180, 100%, 25%);
+  color: #fff;
+  border-radius: 1.5rem;
+  border: 1px solid transparent;
+}
+.main-container h1 {
+  margin: 0.8rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 2rem 0.3rem;
+  color: rgb(3, 153, 207);
+  text-shadow: 0 0 1rem #000;
+}
+/* // Retrieved Values */
+.retrieved-values {
+  border-radius: 10px;
+  min-width: 90%;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  text-shadow: 0 0 0.4rem #000, 0 0 0.8rem #000;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0.4rem #000, 0 0 0.8rem #000, 0 0 1rem #000;
+}
+.displayDetails-table {
+  margin: 2rem;
+  table-layout: auto;
+  min-width: 65rem;
+  empty-cells: hide;
+  border-collapse: collapse;
+  text-align: center;
+  /* border: 2px solid #bbb; */
+}
+.displayDetails-table th,
+.displayDetails-table tr {
+  border: 2px solid #bbb;
+  min-height: 2rem;
+  min-width: max-content;
+  empty-cells: hide;
+}
+.displayDetails-table tr td {
+  min-width: max-content;
+  border: 2px solid #bbb;
+  padding: 1%;
+}
+/* ! display details media queries */
+@media (max-width: 1200px) {
+  .retrieved-values {
+    height: min-content;
+  }
+}
+/* TES9824 */
+
+@media (max-width: 998px) {
+  /* body {
+    max-width: 100vw;
+    margin: 0;
+  } */
+  .main-container-display form {
+    margin: 2rem 0;
+    min-width: 80%;
+  }
+  .main-container-display {
+    min-width: 95vw;
+    padding: 2%;
+    /* background-color: #5340e3; */
+  }
+
+  .main-container-display form .fetch-details .fetching-input {
+    font-size: 1.2rem;
+  }
+
+  .main-container-display
+    form
+    .fetch-details
+    .fetching-input:not(:placeholder-shown) {
+    font-size: 1.4rem;
+  }
+
+  .main-container-display .retrieved-values {
+    min-width: 100%;
+    min-height: 16vh;
+    /* padding: 0.5%; */
+    /* background-color: #ff4b4b; */
+    /* margin: 0; */
+  }
+  .main-container-display table {
+    min-width: 98%;
+    margin: 0;
+    /* max-width: 95%; */
+  }
+
+  .main-container-display table th {
+    font-size: 1rem;
+  }
+
+  .main-container-display table td {
+    font-size: 1.12rem;
+    padding: 0.1%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container-display form {
+    min-height: 20vh;
+    gap: 2rem;
+  }
+
+  .main-container-display form .fetch-details {
+    /* flex-direction: column; */
+    min-height: 16vh;
+    /* background-color: #fff; */
+    padding: 1%;
+  }
+
+  .main-container-display table td {
+    font-size: 1rem;
+  }
+
+  .main-container-display .retrieved-values {
+    min-width: 98vw;
+    /* background-color: aquamarine; */
+  }
+}
+@media (max-width: 624px) {
+  /* .main-container-display form {
+    background-color: aquamarine;
+  } */
+  .main-container-display form .fetch-details input {
+    font-size: 1.2rem;
+    min-width: 70%;
+  }
+  .main-container-display
+    form
+    .fetch-details
+    input[type="text"]:not(:placeholder-shown) {
+    font-size: 1.4rem;
+  }
+
+  .main-container-display .retrieved-values {
+    min-width: 92vw;
+    max-width: 96vw;
+    padding: 1%;
+  }
+  .main-container-display .retrieved-values table th {
+    font-size: 0.98rem;
+    font-weight: 400;
+    color: #f11f1f;
+  }
+
+  .main-container-display .retrieved-values table td {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 486px) {
+  .main-container-display form {
+    min-width: 90vw;
+    /* background-color: #f34646; */
+    padding: 2%;
+  }
+
+  .main-container-display form .fetch-details {
+    /* background-color: #bbb; */
+    min-width: 94%;
+    margin: 0;
+    padding: 1%;
+  }
+
+  .main-container-display form .fetch-details input:placeholder-shown {
+    min-width: 70%;
+    font-size: 1rem;
+  }
+
+  .displayDetails-table thead {
+    display: none;
+  }
+
+  .displayDetails-table {
+    display: block;
+    max-width: 98vw;
+    overflow-wrap: anywhere;
+    overscroll-behavior-x: contain;
+  }
+  .main-container-display .displayDetails-table tbody,
+  .main-container-display .displayDetails-table tr,
+  .main-container-display .displayDetails-table td {
+    display: block;
+    /* min-height: 4vh; */
+    min-width: 94%;
+    overflow-wrap: anywhere;
+    overscroll-behavior-x: contain;
+    overflow-x: scroll;
+  }
+
+  .main-container-display .retrieved-values {
+    min-height: 32vh;
+    padding: 1%;
+  }
+  .main-container-display .displayDetails-table td {
+    text-align: left;
+    padding: 0.4% 0 0.4% 22%;
+    min-height: 3.8vh;
+    max-height: 4vh;
+    position: relative;
+  }
+
+  .displayDetails-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    min-width: 50%;
+    padding: 0 15px;
+    font-weight: bold;
+    text-align: left;
+    color: #f34646;
+  }
+}
+
+@media (max-width: 368px) {
+  .main-container-display form {
+    min-height: 14vh;
+    max-height: 16vh;
+  }
+
+  .main-container-display form .fetch-details {
+    flex-direction: column;
+    min-height: 8vh;
+    max-height: 10vh;
+    gap: 1rem;
+  }
+  .main-container-display
+    form
+    .fetch-details
+    input[type="text"]:placeholder-shown {
+    min-height: 4vh;
+    max-height: 4.4vh;
+    min-width: 88%;
+    margin: 0;
+    font-size: 1.28rem;
+  }
+
+  .main-container-display
+    form
+    .fetch-details
+    input[type="text"]:not(:placeholder-shown) {
+    min-height: 4vh;
+    max-height: 4.4vh;
+  }
+  .main-container-display form .fetch-details button[type="submit"] {
+    font-size: 1.2rem;
+    min-height: 3vh;
+    max-height: 4vh;
+    margin: 0;
+  }
+
+  .main-container-display .displayDetails-table tr,
+  .main-container-display .displayDetails-table tr td {
+    border: 1px solid;
+    font-size: 1.1rem;
+    /* background-color: yellowgreen; */
+  }
+
+  .main-container-display .displayDetails-table td {
+    font-size: 1.2rem;
+    padding-left: 32%;
+    padding-top: 2%;
+  }
+}
+
+@media (max-width: 260px) {
+  .main-container-display
+    form
+    .fetch-details
+    input[type="text"]:placeholder-shown {
+    font-size: 1rem;
+  }
+
+  .main-container-display form .fetch-details button[type="submit"] {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  max-width: 100vw;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 14vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+header div {
+  min-width: 98%;
+  max-width: 100%;
+  height: 14vh;
+}
+header :nth-child(1) {
+  position: absolute;
+  z-index: 0;
+
+  border-radius: 50% 50% 0% 42% / 100% 100% 0% 0%;
+  background: hsla(92, 85%, 68%, 1);
+
+  background: hsla(347, 89%, 61%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(347, 89%, 61%, 1) 0%,
+    hsla(242, 42%, 40%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(347, 89%, 61%, 1) 0%,
+    hsla(242, 42%, 40%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(347, 89%, 61%, 1) 0%,
+    hsla(242, 42%, 40%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F44369", endColorstr="#3E3B92", GradientType=1 );
+}
+header :nth-child(2) {
+  position: absolute;
+  z-index: 1;
+  /* background: rgba(12, 232, 225, 0.5); */
+  border-radius: 50% 50% 49% 51% / 55% 49% 51% 44%;
+  background: hsla(270, 94%, 25%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(270, 94%, 25%, 1) 0%,
+    hsla(158, 94%, 49%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(270, 94%, 25%, 1) 0%,
+    hsla(158, 94%, 49%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(270, 94%, 25%, 1) 0%,
+    hsla(158, 94%, 49%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#42047E", endColorstr="#07F49E", GradientType=1 );
+}
+
+header :nth-child(3) {
+  position: absolute;
+  z-index: 3;
+  /* background: rgba(12, 232, 225, 0.5); */
+  border-radius: 10% 17% 48% 52% / 0% 0% 78% 79%;
+  background: hsla(116, 50%, 48%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(116, 50%, 48%, 1) 0%,
+    hsla(101, 46%, 8%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(116, 50%, 48%, 1) 0%,
+    hsla(101, 46%, 8%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(116, 50%, 48%, 1) 0%,
+    hsla(101, 46%, 8%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#46B83D", endColorstr="#111E0B", GradientType=1 );
+}
+
+header :nth-child(4) {
+  position: absolute;
+  z-index: 4;
+  /* background: rgba(12, 232, 225, 0.5); */
+  border-radius: 10% 17% 49% 51% / 0% 0% 100% 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* background: hsla(189, 92%, 69%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(189, 92%, 69%, 1) 0%,
+    hsla(335, 89%, 66%, 1) 50%,
+    hsla(240, 63%, 57%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(189, 92%, 69%, 1) 0%,
+    hsla(335, 89%, 66%, 1) 50%,
+    hsla(240, 63%, 57%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(189, 92%, 69%, 1) 0%,
+    hsla(335, 89%, 66%, 1) 50%,
+    hsla(240, 63%, 57%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#68E3F9", endColorstr="#F55A9B", GradientType=1 ); */
+}
+
+.logo {
+  /* background: rgba(255, 255, 255, 0.4); */
+  position: absolute;
+  z-index: 5;
+  width: fit-content;
+  /* color: #000; */
+  color: #fff;
+  font-size: 2.2rem;
+  font-family: Bebas Neue;
+  text-indent: 1;
+}
+.opt-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20vh;
+  /* background-color: #fff; */
+}
+.opt-container section {
+  /* background-color: rgba(255, 255, 255, 0.4); */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 95vw;
+  max-width: 100vw;
+  gap: 3rem;
+}
+.opt {
+  width: 20vw;
+  height: 16vh;
+  /* background-color: #5981ba; */
+  text-decoration: none;
+  /* border-radius: 43% 10% 46% 10% / 72% 0% 58% 0%; */
+  /* box-shadow: 0 0 1.3rem #fff; */
+  color: azure;
+  font-size: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s ease;
+  border-radius: 1rem;
+  background: hsla(197, 100%, 63%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#40C9FF", endColorstr="#E81CFF", GradientType=1 );
+}
+
+.opt:hover {
+  box-shadow: 0 0 1.3rem #fff;
+  border-radius: 43% 10% 46% 10% / 72% 0% 58% 0%;
+}
+
+/* ! Media Query */
+@media (max-width: 1200px) {
+  /* html {
+    font-size: 55%;
+  } */
+}
+@media (max-width: 687px) {
+  .logo {
+    width: fit-content;
+  }
+}
+@media (max-width: 450px) {
+  .logo {
+    width: fit-content;
+  }
+  .opt {
+    height: 7rem;
+  }
+  .opt-container section {
+    /* justify-content: space-around; */
+    gap: 2rem;
+  }
+}
+@media (max-width: 368px) {
+  /* html {
+    font-size: 20%;
+  } */
+  .root > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo {
+    font-size: 1.5rem;
+    max-width: fit-content;
+  }
+  header {
+    max-height: 10vh;
+    max-width: 90vw;
+  }
+  header div {
+    min-width: 98%;
+    max-width: 100%;
+    height: 8vh;
+  }
+  .opt-container {
+    /* padding: 4% 8%; */
+    min-height: 75vh;
+    max-height: 80vh;
+    width: 80vw;
+    /* background-color: #ef6060; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+  }
+  .opt-container section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(118, 55%, 50%);
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    min-height: 60vh;
+    max-height: 70vh;
+    max-width: 70vw;
+    min-width: 60vw;
+    border-radius: 1.8rem;
+
+    /* min-width: 100vw; */
+  }
+  .opt {
+    min-width: 15rem;
+    max-height: 5rem;
+    margin: 0;
+  }
+}
