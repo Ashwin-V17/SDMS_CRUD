@@ -17,12 +17,14 @@ const DisplayDetails = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!acknowledgement) {
-      alert("Please enter an acknowledgement or mobile number.");
+      alert("Please enter your acknowledgement No");
       return;
     }
 
     axios
-      .get(`http://localhost:3000/getByNumber/${acknowledgement}`)
+      .get(
+        `https://sdms-crud-backend.onrender.com/getByNumber/${acknowledgement}`
+      )
       .then((response) => {
         const dataValue = response.data;
         dataValue.date = formatDate(dataValue.date);

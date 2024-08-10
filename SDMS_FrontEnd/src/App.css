@@ -1,7 +1,10 @@
 /* ! */
-#particles-js {
+#root {
   position: absolute;
   z-index: 1;
+}
+#particles-js {
+  position: absolute;
 }
 
 /* !Update */

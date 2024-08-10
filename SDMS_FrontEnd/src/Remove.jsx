@@ -8,7 +8,7 @@ function Remove() {
     console.log("hii..Its working");
 
     axios
-      .delete(`http://localhost:3000/deleteByPhone/${phoneNo}`)
+      .delete(`https://sdms-crud-backend.onrender.com/deleteByPhone/${phoneNo}`)
       .then((response) => {
         console.log("data deleted");
         alert(response.data.message || "Data deleted successfully");
