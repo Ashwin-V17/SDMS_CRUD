@@ -33,18 +33,20 @@ function LoginPage() {
           <h2>Admin Login</h2>
         </header>
         {error && <p className="error-message">{error}</p>}
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <div className="login-form-input-container">
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
         <button type="submit">Login</button>
       </form>
     </div>

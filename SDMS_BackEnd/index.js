@@ -14,8 +14,9 @@ app.use(cors());
 app.use(express.json());
 
 //? Connect to MongoDB
+const MONGO_URI = process.env.MONGO_URI;
 mongoose
-  .connect("mongodb://localhost:27017/studentDetails")
+  .connect(MONGO_URI, {})
   .then(() =>
     app.listen(3000, () => console.log("Server running on port 3000"))
   )

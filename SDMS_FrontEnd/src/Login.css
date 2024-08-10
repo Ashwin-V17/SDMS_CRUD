@@ -14,9 +14,21 @@
   width: 90%;
   justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+  position: relative;
 }
-
+.login-form .login-form-input-container {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  left: 1.4rem;
+  top: 8rem;
+  z-index: 3;
+}
 .login-form input {
   margin: 0.5rem 0 2rem 0;
   min-width: 80%;
@@ -43,7 +55,7 @@
 .login-form button[type="submit"] {
   position: absolute;
   z-index: 2;
-  bottom: 10rem;
+  top: 18rem;
   margin-top: 4rem;
   min-width: 10vw;
   max-width: 12vw;
