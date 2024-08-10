@@ -18,19 +18,8 @@
   flex-direction: column;
   position: relative;
 }
-.login-form .login-form-input-container {
-  width: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-  left: 1.4rem;
-  top: 8rem;
-  z-index: 3;
-}
 .login-form input {
-  margin: 0.5rem 0 2rem 0;
+  margin: 0.4rem 0 2rem 0;
   min-width: 80%;
   min-height: 5.4vh;
   transition: 1s all;
@@ -40,6 +29,7 @@
 .login-form p {
   color: #ff0000;
   font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .login-form input:placeholder-shown {
@@ -55,7 +45,7 @@
 .login-form button[type="submit"] {
   position: absolute;
   z-index: 2;
-  top: 18rem;
+  top: 20rem;
   margin-top: 4rem;
   min-width: 10vw;
   max-width: 12vw;
@@ -70,4 +60,19 @@
   color: #fff;
   cursor: pointer;
   background-color: rgba(0, 128, 0, 0.226);
+}
+
+@media (max-width: 387px) {
+  #root .login-container {
+    min-width: 80vw;
+    align-items: start;
+    justify-content: center;
+  }
+  .login-form button[type="submit"] {
+    top: 18rem;
+    min-width: 20vw;
+  }
+  canvas {
+    min-height: 100vh;
+  }
 }
