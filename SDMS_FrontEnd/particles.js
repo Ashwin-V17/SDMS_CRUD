@@ -90,9 +90,10 @@ var pJS = function (tag_id, params) {
     },
     interactivity: {
       detect_on: "canvas",
+      // !edited the onhover effect
       events: {
         onhover: {
-          enable: true,
+          enable: false,
           mode: "grab",
         },
         onclick: {

@@ -52,7 +52,6 @@ const Update = () => {
         setAge(currentYear - yearOfBirth);
       }
 
-      // Call handleDistrict to set division and taluk values
       if (store.district) {
         handleDistrict({ target: { value: store.district } });
       }
@@ -62,14 +61,12 @@ const Update = () => {
   const getPassFailMessage = (mark) => {
     if (mark === "") return "";
 
-    // Check if mark is a valid number string
     if (!/^\d+$/.test(mark)) {
       return <span style={{ color: "red" }}>Not Valid</span>;
     }
 
     const numericMark = parseInt(mark, 10);
 
-    // Check if numericMark is a valid number and falls within the valid range
     if (!isNumber(numericMark) || numericMark < 0 || numericMark > 100) {
       return <span style={{ color: "red" }}>Not Valid</span>;
     }
