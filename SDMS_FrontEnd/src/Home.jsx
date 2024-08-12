@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 function Home() {
   return (
@@ -13,18 +14,18 @@ function Home() {
       </header>
       <div className="opt-container">
         <section>
-          <a href="/add" className="opt">
+          <Link to="/add" className="opt">
             Insert
-          </a>
-          <a href="/update" className="opt">
+          </Link>
+          <Link to="/update" className="opt">
             Update
-          </a>
-          <a href="/display" className="opt">
+          </Link>
+          <Link to="/display" className="opt">
             Fetching
-          </a>
-          <a href="/Remove" className="opt">
+          </Link>
+          <Link to="/Remove" className="opt">
             Delete
-          </a>
+          </Link>
         </section>
       </div>
     </>

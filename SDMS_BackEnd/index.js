@@ -6,13 +6,14 @@ const app = express();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const Admin = require("./models/Admin");
+const path = require("path");
 const authMiddleware = require("./authMiddleware");
 require("dotenv").config();
 const JWT_SECRET = process.env.JWT_SECRET;
 console.log(JWT_SECRET);
 app.use(cors());
 app.use(express.json());
-
+app.use(express.static(path.join(__dirname, "../SDMS_FrontEnd/dist")));
 //? Connect to MongoDB
 const MONGO_URI = process.env.MONGO_URI;
 mongoose
@@ -55,6 +56,10 @@ app.post("/api/login", async (req, res) => {
 //? Authenticating
 app.get("/protected-route", authMiddleware, (req, res) => {
   res.status(200).json({ message: "You have access to this route" });
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../SDMS_FrontEnd/dist", "index.html"));
 });
 
 //? Create a new student
