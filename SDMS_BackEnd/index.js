@@ -13,7 +13,9 @@ const JWT_SECRET = process.env.JWT_SECRET;
 console.log(JWT_SECRET);
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "../SDMS_FrontEnd/dist")));
+
+const frontendPath = path.join(__dirname, "../SDMS_FrontEnd/dist");
+app.use(express.static(frontendPath));
 //? Connect to MongoDB
 const MONGO_URI = process.env.MONGO_URI;
 mongoose
@@ -58,12 +60,8 @@ app.get("/protected-route", authMiddleware, (req, res) => {
   res.status(200).json({ message: "You have access to this route" });
 });
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../SDMS_FrontEnd/dist", "index.html"));
-});
-
 //? Create a new student
-app.post("/create", async (req, res) => {
+app.post("/api/create", async (req, res) => {
   try {
     const student = new studentModel(req.body);
     const result = await student.save();
@@ -77,7 +75,7 @@ app.post("/create", async (req, res) => {
 });
 
 //? Fetch data by acknowledgement number
-app.get("/getByNumber/:acknowledgement", async (req, res) => {
+app.get("/api/getByNumber/:acknowledgement", async (req, res) => {
   try {
     const student = await studentModel.findOne({
       randomVal: req.params.acknowledgement,
@@ -93,7 +91,7 @@ app.get("/getByNumber/:acknowledgement", async (req, res) => {
 });
 
 //? Fetch data for update by acknowledgement number
-app.get("/updateByAcknowledge/:acknowledgement", async (req, res) => {
+app.get("/api/updateByAcknowledge/:acknowledgement", async (req, res) => {
   try {
     const student = await studentModel.findOne({
       randomVal: req.params.acknowledgement,
@@ -109,7 +107,7 @@ app.get("/updateByAcknowledge/:acknowledgement", async (req, res) => {
 });
 
 //? Update data by acknowledgement number
-app.put("/saveUpdate/:acknowledgement", async (req, res) => {
+app.put("/api/saveUpdate/:acknowledgement", async (req, res) => {
   try {
     const acknowledgement = req.params.acknowledgement;
     const updateData = req.body;
@@ -132,7 +130,7 @@ app.put("/saveUpdate/:acknowledgement", async (req, res) => {
 });
 
 // Delete a student by phone number
-app.delete("/deleteByPhone/:phNo", async (req, res) => {
+app.delete("/api/deleteByPhone/:phNo", async (req, res) => {
   try {
     const phoneNo = req.params.phNo;
     const result = await studentModel.findOne({ mobile: phoneNo });
@@ -145,5 +143,13 @@ app.delete("/deleteByPhone/:phNo", async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+app.get("*", (req, res) => {
+  if (req.originalUrl.startsWith("/api/")) {
+    res.status(404).send("API route not found");
+  } else {
+    res.sendFile(path.join(frontendPath, "index.html"));
   }
 });

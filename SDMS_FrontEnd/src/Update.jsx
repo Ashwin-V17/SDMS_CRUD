@@ -91,7 +91,7 @@ const Update = () => {
 
     axios
       .get(
-        `https://sdms-crud-backend.onrender.com/updateByAcknowledge/${acknowledgement}`
+        `https://sdms-crud-backend.onrender.com/api/updateByAcknowledge/${acknowledgement}`
       )
       .then((response) => {
         const dataValue = response.data;
@@ -141,7 +141,7 @@ const Update = () => {
 
     try {
       await axios.put(
-        `https://sdms-crud-backend.onrender.com/saveUpdate/${acknowledgement}`,
+        `https://sdms-crud-backend.onrender.com/api/saveUpdate/${acknowledgement}`,
         formValues
       );
       console.log("Form values sent to backend");

@@ -20,19 +20,22 @@ const DisplayDetails = () => {
       alert("Please enter your acknowledgement No");
       return;
     }
-
+    // http://localhost:3000/
+    // https://sdms-crud-backend.onrender.com/
     axios
       .get(
-        `https://sdms-crud-backend.onrender.com/getByNumber/${acknowledgement}`
+        `https://sdms-crud-backend.onrender.com/api/getByNumber/${acknowledgement}`
       )
       .then((response) => {
+        console.log("entered response layer");
+        console.log("Response data:", response.data);
         const dataValue = response.data;
         dataValue.date = formatDate(dataValue.date);
         setStore(dataValue);
         setDisplayDetails(true);
       })
       .catch((err) => {
-        console.error(err);
+        console.error("main error : " + err);
         alert("Error fetching data. Please try again.");
       });
   };
