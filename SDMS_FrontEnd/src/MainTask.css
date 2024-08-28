@@ -728,20 +728,21 @@ input[type="submit"]:hover {
     font-size: small;
   }
   .Main-container h1 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     max-width: 95%;
   }
   .Main-container form {
     min-width: 90vw;
+    max-width: 94vw;
   }
   .Main-container .form-contents label {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 400;
   }
   .Main-container .form-contents textarea:placeholder-shown {
     min-width: 55%;
     min-height: 15vh;
-    font-size: 1.72rem;
+    font-size: 1.42rem;
     font-weight: 400;
     transition: 1s ease;
   }
@@ -752,10 +753,10 @@ input[type="submit"]:hover {
     font-size: 1rem;
   }
   .Main-container .form-contents input[type="date"] {
-    font-size: 1.48rem;
+    font-size: 1.4rem;
     /* padding-left: 0.5rem; */
     font-weight: 400;
-    max-width: 60%;
+    min-width: 60%;
     min-height: 2.8rem;
     max-height: 4rem;
     padding: 0;
@@ -766,7 +767,7 @@ input[type="submit"]:hover {
   .Main-container .form-contents input[type="tel"]:placeholder-shown,
   .Main-container .form-contents input[type="number"]:placeholder-shown,
   .Main-container .form-contents select {
-    font-size: 1.72rem;
+    font-size: 1.4rem;
     font-weight: 400;
     max-width: 60%;
     min-height: 2.5rem;
@@ -778,9 +779,9 @@ input[type="submit"]:hover {
   .Main-container .form-contents input[type="number"]:not(:placeholder-shown),
   .Main-container .form-contents input[type="date"]:valid,
   .Main-container .form-contents select:valid {
-    max-width: 65%;
+    min-width: 72%;
     max-height: 4.5rem;
-    font-size: 1.68rem;
+    font-size: 1.42srem;
   }
 
   .Main-container .form-contents textarea:not(:placeholder-shown) {
@@ -798,16 +799,18 @@ input[type="submit"]:hover {
     transition: 1s ease;
   }
   .Main-container .subjects input[type="text"]:not(:placeholder-shown) {
+    min-width: 3rem;
     max-width: 6rem;
     max-height: 4rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-right: 10%;
   }
   .Main-container .subjects span {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 500;
     background-color: #ffffff8a;
     border-radius: 5px;
+    min-width: 4rem;
     max-width: 8rem;
     max-height: 4rem;
     padding: 2%;
@@ -817,7 +820,7 @@ input[type="submit"]:hover {
     font-size: 1.4rem;
   }
   .submit-container input[type="submit"] {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     max-width: 60%;
     max-height: 4rem;
   }
@@ -825,7 +828,7 @@ input[type="submit"]:hover {
   .Main-container .display-details {
     max-width: 50%;
     max-height: 5rem;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     text-align: center;
     padding-top: 2%;
     margin: 0;

@@ -10,7 +10,7 @@ const path = require("path");
 const authMiddleware = require("./authMiddleware");
 require("dotenv").config();
 const JWT_SECRET = process.env.JWT_SECRET;
-console.log(JWT_SECRET);
+// console.log(JWT_SECRET);
 app.use(cors());
 app.use(express.json());
 

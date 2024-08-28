@@ -5,10 +5,10 @@ function Remove() {
   const [phoneNo, setPhoneNo] = useState();
   const handleDelete = (e) => {
     e.preventDefault();
-    console.log("hii..Its working");
-
     axios
-      .delete(`https://sdms-crud-backend.onrender.com/api/deleteByPhone/${phoneNo}`)
+      .delete(
+        `https://sdms-crud-backend.onrender.com/api/deleteByPhone/${phoneNo}`
+      )
       .then((response) => {
         console.log("data deleted");
         alert(response.data.message || "Data deleted successfully");
