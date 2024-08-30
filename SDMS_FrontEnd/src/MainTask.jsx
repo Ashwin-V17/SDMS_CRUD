@@ -375,7 +375,7 @@ const MainTask = () => {
       </h1>
 
       <Link className="display-details" to="/display">
-        Display Details
+        <h4>Display Details</h4>
       </Link>
     </div>
   );
