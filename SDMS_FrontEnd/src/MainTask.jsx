@@ -269,6 +269,7 @@ const MainTask = () => {
           <label htmlFor="">Subject1</label>
           <input
             type="text"
+            className="sub-inp"
             placeholder="enter sub1 marks"
             name="sub1"
             value={sub1}
@@ -281,6 +282,7 @@ const MainTask = () => {
           <label htmlFor="">Subject2</label>
           <input
             type="text"
+            className="sub-inp"
             placeholder="enter sub2 marks"
             name="sub2"
             value={sub2}
@@ -293,6 +295,7 @@ const MainTask = () => {
           <label htmlFor="">Subject3</label>
           <input
             type="text"
+            className="sub-inp"
             placeholder="enter sub3 marks"
             name="sub3"
             value={sub3}
@@ -305,6 +308,7 @@ const MainTask = () => {
           <label htmlFor="">Subject4</label>
           <input
             type="text"
+            className="sub-inp"
             placeholder="enter sub4 marks"
             name="sub4"
             value={sub4}
@@ -317,6 +321,7 @@ const MainTask = () => {
           <label htmlFor="">Subject5</label>
           <input
             type="text"
+            className="sub-inp"
             placeholder="enter sub5 marks"
             name="sub5"
             value={sub5}
@@ -329,6 +334,7 @@ const MainTask = () => {
           <label htmlFor="">Subject6</label>
           <input
             type="text"
+            className="sub-inp"
             placeholder="enter sub6 marks"
             name="sub6"
             value={sub6}
