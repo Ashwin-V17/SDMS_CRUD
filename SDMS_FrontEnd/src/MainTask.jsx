@@ -80,8 +80,8 @@ const MainTask = () => {
       age,
       address,
       district,
-      division,
-      taluk,
+      division: selectedDivision,
+      taluk: selectedTaluk,
       sub1,
       sub2,
       sub3,
@@ -187,6 +187,7 @@ const MainTask = () => {
             name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            required
           />
         </div>
         <div className="form-contents">
@@ -197,6 +198,7 @@ const MainTask = () => {
             name="mobile"
             value={mobile}
             onChange={(e) => setMobile(e.target.value)}
+            required
           />
         </div>
         <div className="form-contents">
