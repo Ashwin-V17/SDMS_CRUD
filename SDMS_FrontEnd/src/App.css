@@ -403,7 +403,7 @@ input[type="submit"]:hover {
     .fetching-form
     .fetch-details
     > input[type="text"]:placeholder-shown {
-    min-width: 80%;
+    min-width: 86%;
     max-width: 90%;
   }
   .Main-container-update

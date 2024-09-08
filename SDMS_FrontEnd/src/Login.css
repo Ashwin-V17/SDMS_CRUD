@@ -2,7 +2,7 @@
   min-height: 80vh;
   min-width: 30vw;
   background: rgba(255, 255, 255, 0.2);
-  margin-top: 2.4rem;
+  margin-top: 2rem;
   border-radius: 1rem;
   display: flex;
   align-items: start;
@@ -10,18 +10,22 @@
 }
 
 .login-container h2 {
-  color: #fff;
+  color: hsl(118, 82%, 53%);
   text-shadow: 0 0 1rem #000;
+  margin: 1rem 0 4rem 0;
 }
 
 .login-container .login-form {
   display: flex;
   width: 90%;
+  min-height: 80vh;
   justify-content: center;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   position: relative;
+  padding-top: 5%;
+  gap: 1rem;
 }
 .login-form input {
   margin: 0.4rem 0 2rem 0;
@@ -35,7 +39,9 @@
 .login-form p {
   color: #ff0000;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  position: absolute;
+  top: 100px;
+  /* margin-bottom: 1rem; */
 }
 
 .login-form input:placeholder-shown {
@@ -48,14 +54,20 @@
   font-size: 1.18rem;
 }
 
+.login-form .login-submit-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
 .login-form button[type="submit"] {
-  position: absolute;
+  /* position: relative; */
   z-index: 2;
-  top: 20rem;
-  margin-top: 4rem;
-  min-width: 10vw;
+  /* top: 20rems; */
+  margin-top: 2rem;
+  min-width: 9.2vw;
   max-width: 12vw;
-  min-height: 6vh;
+  min-height: 5vh;
   border-radius: 0.8rem;
   font-size: 1.2rem;
   border: none;
@@ -71,11 +83,19 @@
 @media (max-width: 478px) {
   #root .login-container {
     min-width: 80vw;
+    min-height: 50vh;
+    max-height: 60vh;
     align-items: start;
     justify-content: center;
   }
+
+  .login-container .login-form {
+    min-height: 40vh;
+  }
+
   .login-form button[type="submit"] {
     top: 18rem;
     min-width: 20vw;
+    margin: 10vh 0;
   }
 }

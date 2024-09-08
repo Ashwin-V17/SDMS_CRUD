@@ -4,7 +4,7 @@ import "./Home.css";
 function Home() {
   return (
     <>
-      <header>
+      <header className="home-header">
         <div className="bg-div-header"></div>
         <div className="bg-div-header"></div>
         <div className="bg-div-header"></div>

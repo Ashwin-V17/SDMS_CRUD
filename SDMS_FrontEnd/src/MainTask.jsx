@@ -21,6 +21,8 @@ const MainTask = () => {
   const [district, setDistrict] = useState("");
   const [taluk, setTaluk] = useState([]);
   const [division, setDivision] = useState([]);
+  const [selectedDivision, setSelectedDivision] = useState("");
+  const [selectedTaluk, setSelectedTaluk] = useState("");
   const [isInvalid, setIsInvalid] = useState(false);
 
   useEffect(() => {
@@ -77,6 +79,9 @@ const MainTask = () => {
       date: datePart,
       age,
       address,
+      district,
+      division,
+      taluk,
       sub1,
       sub2,
       sub3,

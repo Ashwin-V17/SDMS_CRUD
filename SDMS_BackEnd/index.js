@@ -37,9 +37,10 @@ app.post("/api/login", async (req, res) => {
       console.log("username not matching");
       return res.status(400).json({ error: "Invalid credentials" });
     }
-
     // const isMatch = await bcrypt.compare(password, admin.password);
-    if (!password) {
+    const db_password = admin.password;
+    console.log(db_password);
+    if (password !== db_password) {
       console.log("password not Matching");
       return res.status(400).json({ error: "Invalid credentials" });
     }
