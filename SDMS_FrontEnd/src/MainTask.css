@@ -228,6 +228,7 @@ input[type="submit"]:hover {
   margin: 50px;
   color: #fff;
   width: 12rem;
+  min-height: 6vh;
   /* text-align: center;  */
   text-decoration: none;
   border-radius: 1.4rem;
@@ -905,7 +906,7 @@ input[type="submit"]:hover {
     font-size: 3.6rem;
     font-weight: 600;
   }
-  .Main-container .subjects input {
+  .Main-containewr .subjects input {
     width: 16rem;
     transition: 1s ease;
   }

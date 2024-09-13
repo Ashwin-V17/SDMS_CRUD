@@ -252,7 +252,12 @@ const MainTask = () => {
 
         <div className="form-contents">
           <label htmlFor="">Division</label>
-          <select name="" required>
+          <select
+            name="division"
+            value={selectedDivision}
+            onChange={(e) => setSelectedDivision(e.target.value)}
+            required
+          >
             <option value="">Select Division</option>
             {division.map((divisionVal, index) => (
               <option key={index} value={divisionVal}>
@@ -263,7 +268,12 @@ const MainTask = () => {
         </div>
         <div className="form-contents">
           <label htmlFor="">Taluk</label>
-          <select name="" required>
+          <select
+            name="taluk"
+            value={selectedTaluk}
+            onChange={(e) => setSelectedTaluk(e.target.value)}
+            required
+          >
             <option value="">Select Taluk</option>
             {taluk.map((talukVal, index) => (
               <option key={index} value={talukVal}>

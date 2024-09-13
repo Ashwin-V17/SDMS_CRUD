@@ -204,7 +204,7 @@ const Update = () => {
         <div className="fetch-details">
           <input
             type="text"
-            placeholder="Enter an acknowledgement or mobile"
+            placeholder="Enter an acknowledgement number"
             value={acknowledgement}
             className="fetching-input"
             onChange={(e) => setAcknowledgement(e.target.value)}
@@ -304,7 +304,7 @@ const Update = () => {
                 ))}
               </select>
             </div>
-            <div className="form-contents mark-inputs">
+            <div className="mark-inputs">
               <label>Subject 1</label>
               <input
                 type="number"
@@ -314,7 +314,7 @@ const Update = () => {
               />
               {getPassFailMessage(sub1)}
             </div>
-            <div className="form-contents mark-inputs">
+            <div className="mark-inputs">
               <label>Subject 2</label>
               <input
                 type="number"
@@ -324,7 +324,7 @@ const Update = () => {
               />
               {getPassFailMessage(sub2)}
             </div>
-            <div className="form-contents mark-inputs">
+            <div className="mark-inputs">
               <label>Subject 3</label>
               <input
                 type="number"
@@ -334,7 +334,7 @@ const Update = () => {
               />{" "}
               {getPassFailMessage(sub3)}
             </div>
-            <div className="form-contents mark-inputs">
+            <div className="mark-inputs">
               <label>Subject 4</label>
               <input
                 type="number"
@@ -344,7 +344,7 @@ const Update = () => {
               />
               {getPassFailMessage(sub4)}
             </div>
-            <div className="form-contents mark-inputs">
+            <div className="mark-inputs">
               <label>Subject 5</label>
               <input
                 type="number"
@@ -355,7 +355,7 @@ const Update = () => {
               {getPassFailMessage(sub5)}
             </div>
 
-            <div className="form-contents mark-inputs">
+            <div className="mark-inputs">
               <label>Subject 6</label>
               <input
                 type="number"

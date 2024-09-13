@@ -40,6 +40,9 @@
   align-items: center;
   gap: 5rem;
 }
+.fetching-form input[type="text"] {
+  transition: 1s all;
+}
 .fetching-form input[type="text"]:placeholder-shown {
   padding: 0.6rem 1.3rem 0.5rem 1.3rem;
   border-radius: 1.4rem;
@@ -48,14 +51,21 @@
   /* width: 20rem; */
   border: none;
   font-size: 1.3rem;
-  transition: 1s all;
 }
 
 /* remove-student */
 .fetching-form .fetch-details input[type="text"]:not(:placeholder-shown) {
   min-width: 32rem;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  padding: 1%;
+  min-height: 6vh;
+  font-size: 1.32rem;
   font-weight: 500;
   background-color: #2a6f15;
+  color: #bbb;
+  text-shadow: 0 0 12px #000;
 }
 .fetching-form button[type="submit"] {
   font-size: 1.5rem;
@@ -153,7 +163,7 @@
   font-size: 1.3rem;
   font-weight: 200;
 }
-.Main-container-update .main-form input,
+.Main-container-update .main-form .form-contents input,
 .Main-container-update .main-form textarea {
   padding: 0.6rem 1.7rem 0.6rem 1rem;
   min-width: 15rem;
@@ -222,6 +232,19 @@
   box-shadow: 0 0 10px #000;
   border-radius: 4px;
 }
+
+.Main-container-update .main-form > .mark-inputs {
+  min-width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 0.8rem;
+  margin: 1.2%;
+  box-shadow: 0 0 10px #000;
+  border-radius: 4px;
+}
+
 .Main-container-update
   .main-form
   > .mark-inputs
@@ -229,7 +252,9 @@
   /* background-color: #ff7474; */
   background: #bbb;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.12rem;
+  border: none;
+  min-height: 6vh;
 }
 .Main-container-update .main-form span {
   min-width: 5.3rem;
@@ -399,12 +424,18 @@ input[type="submit"]:hover {
     flex-direction: column;
     gap: 2rem;
   }
+  .Main-container-update .fetching-form .fetch-details > input[type="text"] {
+    transition: 1s all ease;
+  }
   .Main-container-update
     .fetching-form
     .fetch-details
     > input[type="text"]:placeholder-shown {
-    min-width: 86%;
-    max-width: 90%;
+    min-width: 80vw;
+    font-size: 1.11rem;
+    font-weight: 600;
+    /* transition: 2s all ease; */
+    /* max-width: 90%; */
   }
   .Main-container-update
     .fetching-form
@@ -412,6 +443,7 @@ input[type="submit"]:hover {
     > input[type="text"]:not(:placeholder-shown) {
     min-width: 65%;
     max-width: 80%;
+    padding: 0% 5%;
     font-size: 1.3rem;
   }
 
@@ -436,15 +468,23 @@ input[type="submit"]:hover {
   }
 
   .Main-container-update .main-form > .form-contents > input:placeholder-shown {
-    width: 60%;
+    width: 55%;
     transition: 1s ease;
   }
   .Main-container-update
     .main-form
     > .form-contents
     > input:not(:placeholder-shown) {
-    width: 65%;
+    width: 60%;
   }
+
+  .Main-container-update .main-form > .mark-inputs {
+    min-width: 80%;
+    max-width: 95%;
+    min-height: 9%;
+    max-height: max-content;
+  }
+
   .Main-container-update
     .main-form
     > .mark-inputs
@@ -455,7 +495,9 @@ input[type="submit"]:hover {
     .main-form
     > .mark-inputs
     > input[type="number"]:not(:placeholder-shown) {
-    width: 30%;
+    width: 10vw;
+    background-color: green;
+    padding: 0;
   }
   .Main-container-update .main-form span {
     min-width: 5.3rem;
@@ -564,6 +606,7 @@ input[type="submit"]:hover {
     font-size: 3rem;
     font-weight: 500;
   }
+
   .Main-container-update
     .main-form
     > .mark-inputs
